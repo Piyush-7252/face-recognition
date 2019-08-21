@@ -23,7 +23,7 @@ face_recognizer.read('trainingData.yml')#use this to load training data for subs
 
 
 
-name={0:"Piyush",1:"Priyanka"}
+name={0:"Piyush",1:"Priyanka"}  # 0,1 folders are needed here for providing labals to your images here i have my pics in 0 folder and priyka chopra imaes in 1 folder
 
 for face in faces_detected:
     (x,y,w,h)=face
