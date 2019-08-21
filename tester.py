@@ -4,7 +4,7 @@ import os
 import numpy as np
 import faceRecognition as fr
 
-test_img=cv2.imread('D:\pycharm project\TestImages\piyush8.jpg')
+test_img=cv2.imread('D:\pycharm project\TestImages\piyush8.jpg')  # you need a folder on same directory of TestImages
 faces_detected,gray_img=fr.faceDetection(test_img)
 print("faces_detected:",faces_detected)
 
@@ -15,7 +15,7 @@ cv2.imshow("face.detection.tutorial",resized_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()'''
 
-#faces,faceID=fr.labels_for_training_data('trainingImages')
+#faces,faceID=fr.labels_for_training_data('trainingImages') # a new folder named trainingImages uder it two folder with name 0,1
 #face_recognizer=fr.train_classifier(faces,faceID)
 #face_recognizer.write('trainingData.yml')
 face_recognizer=cv2.face.LBPHFaceRecognizer_create()
