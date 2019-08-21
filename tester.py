@@ -15,11 +15,15 @@ cv2.imshow("face.detection.tutorial",resized_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()'''
 
-#faces,faceID=fr.labels_for_training_data('trainingImages') # a new folder named trainingImages uder it two folder with name 0,1
-#face_recognizer=fr.train_classifier(faces,faceID)
-#face_recognizer.write('trainingData.yml')
-face_recognizer=cv2.face.LBPHFaceRecognizer_create()
-face_recognizer.read('trainingData.yml')#use this to load training data for subsequent runs
+
+#comment this code on 2nd run
+faces,faceID=fr.labels_for_training_data('trainingImages') # a new folder named trainingImages uder it two folder with name 0,1
+face_recognizer=fr.train_classifier(faces,faceID)
+face_recognizer.write('trainingData.yml')
+
+#uncomment this code on 2nd run
+#face_recognizer=cv2.face.LBPHFaceRecognizer_create()
+#face_recognizer.read('trainingData.yml')#use this to load training data for subsequent runs
 
 
 
